@@ -3,9 +3,9 @@
 	"id": "aq",
 	"version": "${version}",
 	"name": "aqutatic additions",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Aquatic additions expands the vanilla ocean content by implementing two new armor sets, a set of tools and various additions. Available for both forge and fabric",
 	"authors": [
-		"Me!"
+		"wampelpampel"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -29,8 +29,8 @@
 		"aqutatic-additions.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14.22",
-		"minecraft": "~1.20.1",
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.4",
 		"java": ">=17",
 		"fabric-api": "*"
 	},

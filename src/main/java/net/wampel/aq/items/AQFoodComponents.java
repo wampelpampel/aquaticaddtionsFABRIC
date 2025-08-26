@@ -1,11 +1,10 @@
 package net.wampel.aq.items;
 
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 
-public class ModFoodComponents {
+public class AQFoodComponents {
     public static final FoodComponent TURTLE_APPLE = new FoodComponent.Builder()
             .hunger(4).saturationModifier(0.25F)
             .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 2*60*20, 4), 1F)

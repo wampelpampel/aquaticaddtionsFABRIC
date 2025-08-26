@@ -1,9 +1,7 @@
 package net.wampel.aq.items;
 
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.item.equipment.ArmorMaterial;
-import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.ItemTags;
@@ -20,8 +18,10 @@ import net.minecraft.item.equipment.EquipmentType;
 public class AQArmorMaterials {
 
     public static final int TURTLE_BASE_DURABILITY = 15;
-    public static final TagKey<Item> REPAIRS_SCUTE = ItemTags.;
-    public static final RegistryKey<EquipmentAsset> AQ_TURTLE_ARMOR_MATERIAL_KEY = RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(AQ.MOD_ID, "aq_turtle"));
+    private static final TagKey<Item> REPAIRS_SCUTE = ItemTags.REPAIRS_TURTLE_HELMET;
+    private static final float TURTLE_TOUGHNESS = 0;
+    private static final float TURTLE_KNOCKBACKRESSISTANCE = 0;
+    private static final RegistryKey<EquipmentAsset> AQ_TURTLE_ARMOR_MATERIAL_KEY = RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(AQ.MOD_ID, "aq_turtle"));
 
     public static final ArmorMaterial AQ_TURTLE_INSTANCE = new ArmorMaterial(
             TURTLE_BASE_DURABILITY,
@@ -32,19 +32,22 @@ public class AQArmorMaterials {
                     EquipmentType.BOOTS, 3
             ),
             5,
-            SoundEvents.ITEM_ARMOR_EQUIP_IRON,
-            0.0F,
-            0.0F,
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE,
+            TURTLE_TOUGHNESS,
+            TURTLE_KNOCKBACKRESSISTANCE,
             REPAIRS_SCUTE,
             AQ_TURTLE_ARMOR_MATERIAL_KEY
     );
 
+
     public static final int TURTLE_MASTER_BASE_DURABILITY = 15;
-    public static final TagKey<Item> REPAIRS_TURTLE_INGO = AQItems.TURTLE_INGOT;
-    public static final RegistryKey<EquipmentAsset> AQ_TURTLE_MASTER_ARMOR_MATERIAL_KEY = RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(AQ.MOD_ID, "aq_turtle"));
+    private static final TagKey<Item> REPAIRS_TURTLE_INGOT = TagKey.of(RegistryKeys.ITEM, Identifier.of(AQ.MOD_ID, "turtle_ingot"));
+    private static final RegistryKey<EquipmentAsset> AQ_TURTLE_MASTER_ARMOR_MATERIAL_KEY = RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(AQ.MOD_ID, "aq_turtle"));
+    private static final float TURTLE_MASTER_TOUGHNESS = 2F;
+    private static final float TURTLE_MASTER_KNOCKBACKRESSISTANCE = 1.5F;
 
     public static final ArmorMaterial AQ_TURTLE_MASTER_INSTANCE = new ArmorMaterial(
-            TURTLE_BASE_DURABILITY,
+            TURTLE_MASTER_BASE_DURABILITY,
             Map.of(
                     EquipmentType.HELMET, 3,
                     EquipmentType.CHESTPLATE, 8,
@@ -52,11 +55,11 @@ public class AQArmorMaterials {
                     EquipmentType.BOOTS, 3
             ),
             5,
-            SoundEvents.ITEM_ARMOR_EQUIP_IRON,
-            0.0F,
-            0.0F,
-            REPAIRS_SCUTE,
-            AQ_TURTLE_ARMOR_MATERIAL_KEY
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE,
+            TURTLE_MASTER_TOUGHNESS,
+            TURTLE_MASTER_KNOCKBACKRESSISTANCE,
+            REPAIRS_TURTLE_INGOT,
+            AQ_TURTLE_MASTER_ARMOR_MATERIAL_KEY
     );
 
 }

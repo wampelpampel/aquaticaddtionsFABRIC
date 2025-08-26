@@ -1,5 +1,5 @@
 package net.wampel.aq.items;
-
+/*
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -82,3 +82,5 @@ public class VTurtleModArmorItem extends ArmorItem {
                 leggings.getMaterial() == material && boots.getMaterial() == material;
     }
 }
+
+ */

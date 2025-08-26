@@ -5,14 +5,12 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import java.util.Map;
 
-
+/*
 //Class is from https://github.com/Tutorials-By-Kaupenjoe/Fabric-Tutorial-1.18.1/blob/18-fullArmorEffect/src/main/java/net/kaupenjoe/tutorialmod/item/custom/ModArmorItem.java
 public class TurtleModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
@@ -83,3 +81,4 @@ public class TurtleModArmorItem extends ArmorItem {
                 leggings.getMaterial() == material && boots.getMaterial() == material;
     }
 }
+*/

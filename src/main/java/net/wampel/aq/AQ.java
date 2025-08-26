@@ -2,6 +2,7 @@ package net.wampel.aq;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.wampel.aq.blocks.AQBlocks;
 import net.wampel.aq.items.AQItemGroups;
 import net.wampel.aq.items.AQItems;
 import org.slf4j.Logger;
@@ -14,7 +15,7 @@ public class AQ implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		AQItemGroups.registerItemGroups();
-	//	ModBlocks.registerModBlocks();
+		AQBlocks.initialize();
 		AQItems.initialize();
 	}
 }

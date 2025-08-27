@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "aq:turtle_master"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "aq:turtle_master"
+      }
+    ]
+  }
+}

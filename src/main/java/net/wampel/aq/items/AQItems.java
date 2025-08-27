@@ -55,11 +55,11 @@ public class AQItems {
     public static final Item TURTLE_CHESTPLATE = registerItem("turtle_chestplate",
             Item::new,
             new Item.Settings().maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(AQArmorMaterials.TURTLE_MASTER_BASE_DURABILITY))
-                    .armor(AQArmorMaterials.AQ_TURTLE_MASTER_INSTANCE, EquipmentType.LEGGINGS));
+                    .armor(AQArmorMaterials.AQ_TURTLE_MASTER_INSTANCE, EquipmentType.CHESTPLATE));
     public static final Item TURTLE_LEGGINGS = registerItem("turtle_leggings",
             Item::new,
-            new Item.Settings().maxDamage(EquipmentType.HELMET.getMaxDamage(AQArmorMaterials.TURTLE_MASTER_BASE_DURABILITY))
-                    .armor(AQArmorMaterials.AQ_TURTLE_MASTER_INSTANCE, EquipmentType.HELMET));
+            new Item.Settings().maxDamage(EquipmentType.LEGGINGS.getMaxDamage(AQArmorMaterials.TURTLE_MASTER_BASE_DURABILITY))
+                    .armor(AQArmorMaterials.AQ_TURTLE_MASTER_INSTANCE, EquipmentType.LEGGINGS));
     public static final Item TURTLE_BOOTS = registerItem("turtle_boots",
             Item::new,
             new Item.Settings().maxDamage(EquipmentType.BOOTS.getMaxDamage(AQArmorMaterials.TURTLE_MASTER_BASE_DURABILITY))

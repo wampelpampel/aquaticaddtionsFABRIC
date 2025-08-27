@@ -21,7 +21,7 @@ public class AQArmorMaterials {
     private static final TagKey<Item> REPAIRS_SCUTE = ItemTags.REPAIRS_TURTLE_HELMET;
     private static final float TURTLE_TOUGHNESS = 0;
     private static final float TURTLE_KNOCKBACKRESSISTANCE = 0;
-    private static final RegistryKey<EquipmentAsset> AQ_TURTLE_ARMOR_MATERIAL_KEY = RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(AQ.MOD_ID, "aq_turtle"));
+    public static final RegistryKey<EquipmentAsset> AQ_TURTLE_ARMOR_MATERIAL_KEY = RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(AQ.MOD_ID, "vturtle"));
 
     public static final ArmorMaterial AQ_TURTLE_INSTANCE = new ArmorMaterial(
             TURTLE_BASE_DURABILITY,
@@ -42,8 +42,8 @@ public class AQArmorMaterials {
 
     public static final int TURTLE_MASTER_BASE_DURABILITY = 15;
     private static final TagKey<Item> REPAIRS_TURTLE_INGOT = TagKey.of(RegistryKeys.ITEM, Identifier.of(AQ.MOD_ID, "turtle_ingot"));
-    private static final RegistryKey<EquipmentAsset> AQ_TURTLE_MASTER_ARMOR_MATERIAL_KEY = RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(AQ.MOD_ID, "aq_turtle"));
-    private static final float TURTLE_MASTER_TOUGHNESS = 2F;
+    public static final RegistryKey<EquipmentAsset> AQ_TURTLE_MASTER_ARMOR_MATERIAL_KEY = RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(AQ.MOD_ID, "turtle_master"));
+    public static final float TURTLE_MASTER_TOUGHNESS = 2F;
     private static final float TURTLE_MASTER_KNOCKBACKRESSISTANCE = 1.5F;
 
     public static final ArmorMaterial AQ_TURTLE_MASTER_INSTANCE = new ArmorMaterial(

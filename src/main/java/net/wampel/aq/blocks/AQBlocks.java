@@ -47,6 +47,7 @@ public class AQBlocks {
         public static void initialize() {
             //Dummy method for static initialization
         }
+        //----
 
         public static final Block SCUTE_BLOCK = register(
                 "scute_block",

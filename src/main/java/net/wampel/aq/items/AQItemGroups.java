@@ -17,7 +17,7 @@ public class AQItemGroups {
             Registries.ITEM_GROUP,
             AQ_ITEM_GROUP_KEY,
             FabricItemGroup.builder()
-                            .displayName(Text.translatable("itemgroup.aq"))
+                            .displayName(Text.translatable("itemGroup.aq"))
                             .icon(() -> new ItemStack(AQItems.TURTLE_INGOT)).entries(
                                     ((displayContext, entries) -> {
                                         entries.add(AQItems.TURTLE_INGOT);

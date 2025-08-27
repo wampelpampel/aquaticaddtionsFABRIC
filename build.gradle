@@ -22,11 +22,11 @@ loom {
     runs {
 		// This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
 		datagen {
-			inherit server
+			inherit client
 			name "Data Generation"
 			vmArg "-Dfabric-api.datagen"
 			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-			vmArg "-Dfabric-api.datagen.modid=aqutatic-additions"
+			vmArg "-Dfabric-api.datagen.modid=aq"
  
 			runDir "build/datagen"
 		}
@@ -67,7 +67,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 17
+	it.options.release = 21
 }
 
 java {
@@ -76,8 +76,8 @@ java {
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
 
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 jar {

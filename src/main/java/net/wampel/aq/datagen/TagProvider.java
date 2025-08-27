@@ -17,8 +17,6 @@ public class TagProvider extends FabricTagProvider<Item> {
         super(output, RegistryKeys.ITEM, registriesFuture);
     }
 
-    public static final TagKey<Item> REPAIRS_TURTLE_MASTER = TagKey.of(RegistryKeys.ITEM, Identifier.of(AQ.MOD_ID, "repairs_turtle_master"));
-
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
 

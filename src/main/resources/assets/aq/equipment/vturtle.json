@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "aq:vturtle"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "aq:vturtle"
+      }
+    ]
+  }
+}

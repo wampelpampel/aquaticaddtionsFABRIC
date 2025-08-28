@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": "minecraft:conduit",
+    "I": "aq:turtle_ingot",
+    "P": "aq:vturtle_chestplate"
+  },
+  "pattern": [
+    "IPI",
+    "ICI",
+    "III"
+  ],
+  "result": {
+    "count": 1,
+    "id": "aq:turtle_chestplate"
+  }
+}

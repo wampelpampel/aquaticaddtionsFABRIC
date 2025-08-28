@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": "aq:vturtle_leggings",
+    "I": "aq:turtle_ingot"
+  },
+  "pattern": [
+    "III",
+    "IHI",
+    "I I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "aq:turtle_leggings"
+  }
+}

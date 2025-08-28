@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": "minecraft:turtle_helmet",
+    "I": "aq:turtle_ingot"
+  },
+  "pattern": [
+    "III",
+    "IHI",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "aq:turtle_helmet"
+  }
+}

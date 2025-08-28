@@ -14,7 +14,7 @@ public class AQDataGenerator implements DataGeneratorEntrypoint {
 
 	//	pack.addProvider(TagProvider::new);
 		pack.addProvider(LanguageProvider::new);
-	//	pack.addProvider(RecipeProvider::new);
+		pack.addProvider(RecipeProvider::new);
 		pack.addProvider(ModelProvider::new);
 		pack.addProvider(LootTableProvider::new);
 

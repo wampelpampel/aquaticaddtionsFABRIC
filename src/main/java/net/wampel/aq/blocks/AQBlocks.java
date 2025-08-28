@@ -49,17 +49,27 @@ public class AQBlocks {
         }
         //----
 
+        public static final float scute_block_hardness = 1f;
+        public static final float scute_block_ressistance = 1F;
+
         public static final Block SCUTE_BLOCK = register(
                 "scute_block",
                 Block::new,
-                AbstractBlock.Settings.create().sounds(BlockSoundGroup.ANCIENT_DEBRIS),
+                AbstractBlock.Settings.create()
+                        .sounds(BlockSoundGroup.BAMBOO_WOOD)
+                        .strength(scute_block_hardness, scute_block_ressistance),
                 true
         );
+
+    public static final float turtle_block_hardness = 3.5f;
+    public static final float turtle_block_ressistance = 2.5F;
 
     public static final Block TURTLE_BLOCK = register(
             "turtle_block",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.ANCIENT_DEBRIS),
+            AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.ANCIENT_DEBRIS)
+                    .strength(turtle_block_hardness, turtle_block_ressistance),
             true
     );
 

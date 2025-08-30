@@ -30,7 +30,7 @@ public class AQItemGroups {
                                         entries.add(AQItems.TURTLE_CHESTPLATE);
                                         entries.add(AQItems.TURTLE_LEGGINGS);
                                         entries.add(AQItems.TURTLE_BOOTS);
-
+                                        entries.add(AQItems.TURTLE_MASTER_UPGRADE_TEMPLATE);
                                     })
                             ).build());
 

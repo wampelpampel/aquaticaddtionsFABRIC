@@ -1,6 +1,7 @@
 package net.wampel.aq.items;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.SmithingTemplateItem;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -32,6 +33,7 @@ public class AQItems {
     }
 
     public static final Item TURTLE_INGOT = registerItem("turtle_ingot", Item::new, new Item.Settings());
+    public static final Item TURTLE_MASTER_UPGRADE_TEMPLATE = registerItem("turtle_master_upgrade_template", SmithingTemplateItem::of, new Item.Settings());
 
     //Turtle Armor
     public static final Item VTURTLE_CHESTPLATE = registerItem("vturtle_chestplate",

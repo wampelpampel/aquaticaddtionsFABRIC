@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.wampel.aq.blocks.AQBlocks;
 import net.wampel.aq.items.AQItemGroups;
 import net.wampel.aq.items.AQItems;
+import net.wampel.aq.world.AQLootTableModifiers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,5 +18,6 @@ public class AQ implements ModInitializer {
 		AQItemGroups.registerItemGroups();
 		AQBlocks.initialize();
 		AQItems.initialize();
+        AQLootTableModifiers.registerLootTables();
 	}
 }

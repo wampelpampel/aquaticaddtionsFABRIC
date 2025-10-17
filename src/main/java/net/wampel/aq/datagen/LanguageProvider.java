@@ -15,7 +15,7 @@ public class LanguageProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add("item.aq.turtle_ingot", "Turtle Master Ingot");
-        translationBuilder.add("item.aq.turtle_crafting_upgrade", "Turtle Master Crafting Upgrade");
+        translationBuilder.add("item.aq.turtle_master_upgrade_template", "Turtle Master Upgrade");
         translationBuilder.add("block.aq.scute_block", "Scute Block");
         translationBuilder.add("item.aq.scute_block", "Scute Block");
         translationBuilder.add("itemGroup.aq", "Aquatic Additions");

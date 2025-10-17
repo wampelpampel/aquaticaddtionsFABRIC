@@ -70,6 +70,7 @@ public class ModelProvider extends FabricModelProvider {
         );
 
         itemModelGenerator.register(AQItems.TURTLE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(AQItems.TURTLE_MASTER_UPGRADE_TEMPLATE, Models.GENERATED);
 
     }
 

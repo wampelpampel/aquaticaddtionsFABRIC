@@ -17,9 +17,11 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Map;
 
+//Class is based on https://github.com/Tutorials-By-Kaupenjoe/Fabric-Tutorial-1.21.X/blob/main/src/main/java/net/kaupenjoe/tutorialmod/item/custom/ModArmorItem.java
+//and I slightly modified it for my own armor and for the new minecraft version
 public class TurtleMasterArmorItem extends Item {
 
-    public static final int effectDurationInSeconds = 10*20;
+    public static final int effectDurationInSeconds = 10 * 20;
     public static final int effectAmplifier = 0;
     public static final boolean isEffectVisible = false;
     public static final boolean isEffectAmbient = false;
@@ -35,9 +37,9 @@ public class TurtleMasterArmorItem extends Item {
 
     @Override
     public void inventoryTick(ItemStack stack, ServerWorld world, Entity entity, @Nullable EquipmentSlot slot) {
-        if(!world.isClient()) {
-            if(entity instanceof PlayerEntity player) {
-                if(hasFullSuitOfArmorOn(player)) {
+        if (!world.isClient()) {
+            if (entity instanceof PlayerEntity player) {
+                if (hasFullSuitOfArmorOn(player)) {
                     evaluateArmorEffects(player);
                 }
             }
@@ -49,7 +51,7 @@ public class TurtleMasterArmorItem extends Item {
         for (Map.Entry<ArmorMaterial, List<StatusEffectInstance>> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
             List<StatusEffectInstance> mapStatusEffects = entry.getValue();
 
-            if(hasCorrectArmorOn(player)) {
+            if (hasCorrectArmorOn(player)) {
                 addStatusEffectForMaterial(player, mapStatusEffects);
             }
         }
@@ -58,7 +60,7 @@ public class TurtleMasterArmorItem extends Item {
     private void addStatusEffectForMaterial(PlayerEntity player, List<StatusEffectInstance> mapStatusEffect) {
         boolean hasPlayerEffect = mapStatusEffect.stream().allMatch(statusEffectInstance -> player.hasStatusEffect(statusEffectInstance.getEffectType()));
 
-        if(!hasPlayerEffect) {
+        if (!hasPlayerEffect) {
             for (StatusEffectInstance instance : mapStatusEffect) {
                 player.addStatusEffect(new StatusEffectInstance(instance.getEffectType(),
                         instance.getDuration(), instance.getAmplifier(), instance.isAmbient(), instance.shouldShowParticles()));
@@ -67,10 +69,10 @@ public class TurtleMasterArmorItem extends Item {
     }
 
     private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
-        ItemStack head  = player.getEquippedStack(EquipmentSlot.HEAD);
+        ItemStack head = player.getEquippedStack(EquipmentSlot.HEAD);
         ItemStack chest = player.getEquippedStack(EquipmentSlot.CHEST);
-        ItemStack legs  = player.getEquippedStack(EquipmentSlot.LEGS);
-        ItemStack feet  = player.getEquippedStack(EquipmentSlot.FEET);
+        ItemStack legs = player.getEquippedStack(EquipmentSlot.LEGS);
+        ItemStack feet = player.getEquippedStack(EquipmentSlot.FEET);
         return !head.isEmpty() && !chest.isEmpty() && !legs.isEmpty() && !feet.isEmpty();
     }
 

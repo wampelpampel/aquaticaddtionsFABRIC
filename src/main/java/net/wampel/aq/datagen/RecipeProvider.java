@@ -11,9 +11,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.util.Identifier;
 
-import net.wampel.aq.AQ;
 import net.wampel.aq.blocks.AQBlocks;
 import net.wampel.aq.items.AQItems;
 
@@ -109,13 +107,11 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(AQItems.VTURTLE_CHESTPLATE), conditionsFromItem(AQItems.VTURTLE_CHESTPLATE))
                         .offerTo(exporter);
 */
-                // === Dekomprimieren: Turtle Block -> 9 Ingots ===
                 createShapeless(RecipeCategory.MISC, AQItems.TURTLE_INGOT, 9)
                         .input(AQBlocks.TURTLE_BLOCK)
                         .criterion(hasItem(AQItems.TURTLE_INGOT), conditionsFromItem(AQItems.TURTLE_INGOT))
                         .offerTo(exporter);
 
-                // === Turtle Ingot (Shard + Crystals + Gold + Diamond) ===
                 createShapeless(RecipeCategory.MISC, AQItems.TURTLE_INGOT)
                         .input(Items.PRISMARINE_SHARD)
                         .input(Items.PRISMARINE_CRYSTALS)
@@ -124,9 +120,6 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(AQItems.VTURTLE_CHESTPLATE), conditionsFromItem(AQItems.VTURTLE_CHESTPLATE))
                         .offerTo(exporter, "turtle_ingot_2");
 
-                // === TURTLE ARMOR UPGRADES (smithing_transform) ===
-
-// Helmet: VTURTLE_HELMET + TURTLE_INGOT + TEMPLATE -> TURTLE_HELMET
                 SmithingTransformRecipeJsonBuilder.create(
                                 Ingredient.ofItems(AQItems.TURTLE_MASTER_UPGRADE_TEMPLATE),
                                 Ingredient.ofItems(Items.TURTLE_HELMET),
@@ -137,7 +130,6 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .criterion("has_vturtle_helmet", conditionsFromItem(Items.TURTLE_HELMET))
                         .offerTo(exporter,  "turtle_helmet_upgrade");
 
-// Chestplate: VTURTLE_CHESTPLATE + TURTLE_INGOT + TEMPLATE -> TURTLE_CHESTPLATE
                 SmithingTransformRecipeJsonBuilder.create(
                                 Ingredient.ofItems(AQItems.TURTLE_MASTER_UPGRADE_TEMPLATE),
                                 Ingredient.ofItems(AQItems.VTURTLE_CHESTPLATE),
@@ -148,7 +140,6 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .criterion("has_vturtle_chest", conditionsFromItem(AQItems.VTURTLE_CHESTPLATE))
                         .offerTo(exporter, "turtle_chestplate_upgrade");
 
-// Leggings: VTURTLE_LEGGINGS + TURTLE_INGOT + TEMPLATE -> TURTLE_LEGGINGS
                 SmithingTransformRecipeJsonBuilder.create(
                                 Ingredient.ofItems(AQItems.TURTLE_MASTER_UPGRADE_TEMPLATE),
                                 Ingredient.ofItems(AQItems.VTURTLE_LEGGINGS),
@@ -159,7 +150,6 @@ public class RecipeProvider extends FabricRecipeProvider {
                         .criterion("has_vturtle_legs", conditionsFromItem(AQItems.VTURTLE_LEGGINGS))
                         .offerTo(exporter, "turtle_leggings_upgrade");
 
-// Boots: VTURTLE_BOOTS + TURTLE_INGOT + TEMPLATE -> TURTLE_BOOTS
                 SmithingTransformRecipeJsonBuilder.create(
                                 Ingredient.ofItems(AQItems.TURTLE_MASTER_UPGRADE_TEMPLATE),
                                 Ingredient.ofItems(AQItems.VTURTLE_BOOTS),

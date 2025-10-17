@@ -10,13 +10,10 @@ public class AQDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
-
-
 	//	pack.addProvider(TagProvider::new);
 		pack.addProvider(LanguageProvider::new);
 		pack.addProvider(RecipeProvider::new);
 		pack.addProvider(ModelProvider::new);
 		pack.addProvider(LootTableProvider::new);
-
 	}
 }

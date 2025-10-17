@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class AQArmorMaterials {
 
-    public static final int TURTLE_BASE_DURABILITY = ArmorMaterials.IRON.durability(); //15 is equivalent to iron armor
+    public static final int TURTLE_BASE_DURABILITY = ArmorMaterials.IRON.durability();
     private static final TagKey<Item> REPAIRS_SCUTE = ItemTags.REPAIRS_TURTLE_HELMET;
     private static final float TURTLE_TOUGHNESS = 0;
     private static final float TURTLE_KNOCKBACK_RESISTANCE = 0F;
